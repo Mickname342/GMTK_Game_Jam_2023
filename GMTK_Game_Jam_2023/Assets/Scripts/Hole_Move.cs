@@ -18,7 +18,7 @@ public class Hole_Move : MonoBehaviour
     private bool isDragging;
     private bool inHole;
     public GameObject ball;
-    public bool attached = false;
+    bool attached = false;
 
     private void Start()
     {
@@ -100,5 +100,10 @@ public class Hole_Move : MonoBehaviour
 
         rb.velocity = Vector2.ClampMagnitude(dir * power, maxPower);
         timesShot++;
+    }
+
+    public void Attachement()
+    {
+        attached = true;
     }
 }
