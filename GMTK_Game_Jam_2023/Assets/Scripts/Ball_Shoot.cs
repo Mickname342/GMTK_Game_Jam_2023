@@ -6,6 +6,7 @@ public class Ball_Shoot : MonoBehaviour
 {
     public Transform holeTransform;
     public int timesShoot = 1;
+    public float power = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class Ball_Shoot : MonoBehaviour
         float ycomponent = Mathf.Sin(angle * Mathf.PI / 180) * 10;
         Vector3 forceapplied = new Vector3(xcomponent, ycomponent, 0);
         print(forceapplied);
-        rb.AddForce(forceapplied, ForceMode2D.Impulse);
+        rb.AddForce(forceapplied * power, ForceMode2D.Impulse);
         timesShoot++;
     }
 }

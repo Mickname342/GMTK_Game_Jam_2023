@@ -9,10 +9,7 @@ public class ReloadSceneScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.R))
-        {
-            ReloadLevel();
-        }
+
     }
     public void ReloadLevel()
     {

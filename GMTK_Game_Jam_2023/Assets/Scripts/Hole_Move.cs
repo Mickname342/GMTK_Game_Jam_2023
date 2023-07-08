@@ -23,6 +23,9 @@ public class Hole_Move : MonoBehaviour
     bool attached = false;
     public GameObject number;
     public TMP_Text shotsLeft;
+    public GameObject blackScreen;
+    public Animator reloadAnimator;
+
 
     public Animator anim;
     private void Start()
@@ -30,12 +33,19 @@ public class Hole_Move : MonoBehaviour
         //ball = GameObject.Find("Ball");
         number = GameObject.Find("Number");
         shotsLeft = number.GetComponent<TMP_Text>();
+        blackScreen = GameObject.Find("ReloadAnim");
+        reloadAnimator = blackScreen.GetComponent<Animator>();
+
     }
 
     private void Update()
     {
         rb.angularVelocity = 0;
         shotsLeft.text = (timesToShoot-timesShot).ToString();
+        if (Input.GetKey(KeyCode.R))
+        {
+            ReloadScene();
+        }
         PlayerInput();
     }
 
@@ -120,5 +130,10 @@ public class Hole_Move : MonoBehaviour
     public void Deattached()
     {
         attached = false;
+    }
+
+    public void ReloadScene()
+    {
+        reloadAnimator.SetBool("Death", true);
     }
 }
