@@ -25,6 +25,8 @@ public class Alligator_Move : MonoBehaviour
         if(Vector2.Distance(transform.position, _targetWaypoint.position) < _checkDistance)
         {
             _targetWaypoint = GetNextWaypoint();
+            SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+            sprite.flipX = !sprite.flipX;
         }
     }
 

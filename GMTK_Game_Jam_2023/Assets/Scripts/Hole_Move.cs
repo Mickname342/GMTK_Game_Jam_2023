@@ -20,9 +20,10 @@ public class Hole_Move : MonoBehaviour
     public GameObject ball;
     bool attached = false;
 
+    public Animator anim;
     private void Start()
     {
-        ball = GameObject.Find("Ball");
+        //ball = GameObject.Find("Ball");
     }
 
     private void Update()
@@ -32,7 +33,7 @@ public class Hole_Move : MonoBehaviour
 
     private bool IsReady()
     {
-        return rb.velocity.magnitude <= 0.1f;
+        return rb.velocity.magnitude <= 0.3f;
     }
 
     private void PlayerInput()
@@ -44,12 +45,12 @@ public class Hole_Move : MonoBehaviour
 
         if (IsReady() && timesShot == timesToShoot && attached == false)
         {
-            Destroy(gameObject);
+            anim.SetBool("Failed", true);
         }
 
         if (IsReady() && timesShot == timesToShoot && attached == true)
         {
-            ball.GetComponent<Ball_Shoot>().enabled = true;
+            ball.SetActive(true);
         }
 
         Vector2 inputPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -105,5 +106,10 @@ public class Hole_Move : MonoBehaviour
     public void Attachement()
     {
         attached = true;
+    }
+
+    public void Deattached()
+    {
+        attached = false;
     }
 }

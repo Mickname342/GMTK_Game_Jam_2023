@@ -15,10 +15,20 @@ public class Goal_AttachHole : MonoBehaviour
             Transform hole = collision.transform;
             Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
             rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0;
             hole.position = gameObject.transform.position;
             Hole_Attached attached = collision.GetComponent<Hole_Attached>();
             attached.attached = true;
             
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hole"))
+        {
+            Hole_Move hole_Move = collision.GetComponent<Hole_Move>();
+            hole_Move.Deattached();
         }
     }
 }
