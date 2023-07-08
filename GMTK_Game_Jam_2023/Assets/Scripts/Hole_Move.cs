@@ -28,11 +28,13 @@ public class Hole_Move : MonoBehaviour
 
     private void Update()
     {
+        rb.angularVelocity = 0;
         PlayerInput();
     }
 
     private bool IsReady()
     {
+        
         return rb.velocity.magnitude <= 0.3f;
     }
 
