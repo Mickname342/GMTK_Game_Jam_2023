@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Hole_Move : MonoBehaviour
 {
@@ -19,16 +21,21 @@ public class Hole_Move : MonoBehaviour
     private bool inHole;
     public GameObject ball;
     bool attached = false;
+    public GameObject number;
+    public TMP_Text shotsLeft;
 
     public Animator anim;
     private void Start()
     {
         //ball = GameObject.Find("Ball");
+        number = GameObject.Find("Number");
+        shotsLeft = number.GetComponent<TMP_Text>();
     }
 
     private void Update()
     {
         rb.angularVelocity = 0;
+        shotsLeft.text = (timesToShoot-timesShot).ToString();
         PlayerInput();
     }
 
