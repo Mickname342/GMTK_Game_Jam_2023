@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4958129179186904218}
   - component: {fileID: 4958129179186904219}
   - component: {fileID: 4958129179186904198}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -137,6 +137,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holeTransform: {fileID: 0}
   timesShoot: 1
+  power: 1
+  blackScreen: {fileID: 0}
+  reloadAnimator: {fileID: 0}
 --- !u!95 &4958129179186904198
 Animator:
   serializedVersion: 3

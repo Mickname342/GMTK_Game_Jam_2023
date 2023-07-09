@@ -6,10 +6,12 @@ public class Reload_Animator : MonoBehaviour
 {
     GameObject levelManager;
     ReloadSceneScript reload;
+    Load_Next_Level load;
     void Start()
     {
         levelManager = GameObject.Find("Level Manager");
         reload = levelManager.GetComponent<ReloadSceneScript>();
+        load = levelManager.GetComponent<Load_Next_Level>();
     }
 
     // Update is called once per frame
@@ -21,5 +23,10 @@ public class Reload_Animator : MonoBehaviour
     public void ReloadScene()
     {
         reload.ReloadLevel();
+    }
+
+    public void LoadNextLevel()
+    {
+        load.LoadNextLevel();
     }
 }

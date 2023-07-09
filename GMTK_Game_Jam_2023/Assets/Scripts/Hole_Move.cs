@@ -136,4 +136,9 @@ public class Hole_Move : MonoBehaviour
     {
         reloadAnimator.SetBool("Death", true);
     }
+
+    public void Fail()
+    {
+        anim.SetBool("Failed", true);
+    }
 }

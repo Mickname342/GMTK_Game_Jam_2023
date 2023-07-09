@@ -7,11 +7,16 @@ public class Ball_Shoot : MonoBehaviour
     public Transform holeTransform;
     public int timesShoot = 1;
     public float power = 1;
+
+    public GameObject blackScreen;
+    public Animator reloadAnimator;
     // Start is called before the first frame update
     void Start()
     {
         GameObject hole = GameObject.Find("Goal");
         holeTransform = hole.transform;
+        blackScreen = GameObject.Find("ReloadAnim");
+        reloadAnimator = blackScreen.GetComponent<Animator>();
         Shoot();
     }
 
@@ -33,4 +38,10 @@ public class Ball_Shoot : MonoBehaviour
         rb.AddForce(forceapplied * power, ForceMode2D.Impulse);
         timesShoot++;
     }
+
+    public void LoadNextLevel()
+    {
+        reloadAnimator.SetBool("Load", true);
+    }
+
 }
