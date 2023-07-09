@@ -25,6 +25,7 @@ public class Hole_Move : MonoBehaviour
     public TMP_Text shotsLeft;
     public GameObject blackScreen;
     public Animator reloadAnimator;
+    AudioSource hit;
 
 
     public Animator anim;
@@ -35,6 +36,7 @@ public class Hole_Move : MonoBehaviour
         shotsLeft = number.GetComponent<TMP_Text>();
         blackScreen = GameObject.Find("ReloadAnim");
         reloadAnimator = blackScreen.GetComponent<Animator>();
+        hit = GetComponent<AudioSource>();
 
     }
 
@@ -52,7 +54,7 @@ public class Hole_Move : MonoBehaviour
     private bool IsReady()
     {
         
-        return rb.velocity.magnitude <= 0.3f;
+        return rb.velocity.magnitude <= 0.6f;
     }
 
     private void PlayerInput()
@@ -119,6 +121,7 @@ public class Hole_Move : MonoBehaviour
         Vector2 dir = (Vector2)transform.position - pos;
 
         rb.velocity = Vector2.ClampMagnitude(dir * power, maxPower);
+        hit.Play();
         timesShot++;
     }
 

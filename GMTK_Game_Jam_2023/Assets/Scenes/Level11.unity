@@ -178,6 +178,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FailSquare (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3464580889833309005, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
+      propertyPath: Collide.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 95426936}
+    - target: {fileID: 3464580889833309005, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
+      propertyPath: Collide.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fail
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
 --- !u!1 &33869582
@@ -210,7 +218,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1641489601}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -375,6 +383,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3413911661203277880, guid: 506ca4b1042d6d040ac87570a8e2eaaa, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3413911661203277881, guid: 506ca4b1042d6d040ac87570a8e2eaaa, type: 3}
       propertyPath: m_Color.b
       value: 0.8117648
@@ -467,6 +479,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c28c80554c9eab4997986dacaee4436, type: 3}
+--- !u!114 &95426936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1028335195395809168, guid: 7c28c80554c9eab4997986dacaee4436, type: 3}
+  m_PrefabInstance: {fileID: 95426935}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f27632fc9618b419ca747aa75c8692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &144757990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6037937161965439030, guid: 8231ebe9b723ce847a7f6f7d54ba2f57, type: 3}
@@ -6265,6 +6288,14 @@ PrefabInstance:
     - target: {fileID: 3464580889833309004, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
       propertyPath: m_Name
       value: FailSquare
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464580889833309005, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
+      propertyPath: Collide.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 95426936}
+    - target: {fileID: 3464580889833309005, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
+      propertyPath: Collide.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fail
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd9642c0b578b34189d8c5980bf2d7a, type: 3}
