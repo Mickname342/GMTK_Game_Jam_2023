@@ -26,13 +26,17 @@ There are many obstacles in the way of the ball. Some of them can be removed (li
 The obstacles (other than the tree) are:
 
 Hill: The hole can go through while the ball can't
+
 ![Hill](https://github.com/Mickname342/GMTK_Game_Jam_2023/blob/main/Images/Hill.PNG)
 
 Rock: The ball can go through while the hole can't
+
 ![Rock](https://github.com/Mickname342/GMTK_Game_Jam_2023/blob/main/Images/Rock.PNG)
 
 Crocodile: Acts like a tree (it can be removed by the hole9 but it is a moving obstacle
+
 ![Crocodile](https://github.com/Mickname342/GMTK_Game_Jam_2023/blob/main/Images/Crocodile.PNG)
 
 Sand: It will slow down the hole (For more information check the [Sand_Slowdown script](https://github.com/Mickname342/GMTK_Game_Jam_2023/blob/main/GMTK_Game_Jam_2023/Assets/Scripts/Sand_Slowdown.cs)
+
 ![Sand](https://github.com/Mickname342/GMTK_Game_Jam_2023/blob/main/Images/Sand.PNG)
